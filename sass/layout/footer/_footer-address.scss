@@ -1,0 +1,38 @@
+
+.footer-adress {
+    &__list {
+        @extend %list;
+}
+
+    &__item:not(:last-child) {
+    margin-bottom: 9px;
+}
+
+    &__href {
+    transition: color var(--transition-duration);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    text-decoration: none;
+    font-style: normal;
+    color: var(--white-color);
+}
+
+    &__href:hover, &__href:focus {
+    color: var(--blue-color);
+}
+
+    &__link {
+    transition: color var(--transition-duration);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7;
+    text-decoration: none;
+    font-style: normal;
+    color: rgba(255, 255, 255, 0.6);
+
+    &:hover, &:focus {
+    color: var(--blue-color);
+    }
+}
+}

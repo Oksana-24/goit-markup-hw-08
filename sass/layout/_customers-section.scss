@@ -1,0 +1,35 @@
+.customers {
+    @extend %section;
+
+    &__title {
+    margin-bottom: 50px;
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.17;
+    text-align: center;
+}
+
+    &__list {
+    @extend %list;
+
+    display: flex;
+    gap: 30px;
+}
+
+    &__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: fill var(--transition-duration), border-color var(--transition-duration);
+    border: 1px solid var(--gray-color);
+    border-radius: 4px;
+    width: 170px;
+    height: 92px;
+    fill: var(--gray-color);
+
+    &:hover, &:focus {
+    fill: var(--blue-color);
+    border-color: var(--blue-color);
+    }
+}
+}
