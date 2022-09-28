@@ -1,96 +1,141 @@
-.header {
-    border-bottom: 1px solid #ECECEC;
-    margin: 16px 15px;
+@media screen and (max-width: 768px) {
+    .main-nav {
+    display: none;
+}
 
-    // &__box {
-    //         display: flex;
-    //         align-items: center;
-    //         justify-content: space-between;
-    //     }
-    &__nav {
+    .auth-nav {
+    display: none;
+}
+
+    .open-mobile-menu {
+    line-height: 0;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+}
+}
+
+
+
+.header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ECECEC;
+}
+.header__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 768px) {
+
+    .open-mobile-menu {
+    display: none;
+    }    
+
+    .header {
+        padding: 0;
+
+        &__nav {
     display: flex;
     align-items: center;
     }
-}
-
-.main-nav {
-@extend %list;
-    @media screen and (max-width:768px) {
-        display: none;
     }
+
+    .main-nav {
+    list-style: none;
     display: flex;
-    gap: 50px;
-
+    column-gap: 50px;
     &__link {
-    position: relative;
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    transition: color var(--transition-duration);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.42;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    color: var(--primary-color);
+        position: relative;
+        display: block;
+        padding-top: 32px;
+        padding-bottom: 32px;
+        transition: color var(--transition-duration);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.42;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        color: var(--primary-color);
+        }
+        &__link:hover,
+        &__link:focus {
+            color: var(--blue-color);
+            }
+    
+        &__link.current {
+            color: var(--blue-color);
+        }
     }
 
-    &__link:hover,
-    &__link:focus {
-    color: var(--blue-color);
+        .current::after {
+            position: absolute;
+            content: '';
+            left: 0;
+            bottom: -1px;
+            width: 100%;
+            height: 4px;
+            border-radius: 2px;
+            background-color: var(--blue-color);
+        }
+    .auth-nav {
+        list-style: none;
     }
-
-    &__link.current {
-    color: var(--blue-color);
-}
-}
-
-.current::after {
-    position: absolute;
-    content: '';
-    left: 0;
-    bottom: -1px;
-    width: 100%;
-    height: 4px;
-    border-radius: 2px;
-    background-color: var(--blue-color);
-}
-
-.auth-nav {
-    @extend %list;
-    @media screen and (max-width:768px) {
-        display: none;
+    .auth-nav .link {
+        display: flex;
+        align-items: center;
+        transition: color var(--transition-duration);
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.02em;
+        text-decoration: none;
+        color: var(--secondary-color);
+        fill: currentColor;
+    }
+    .auth-nav-svg {
+        margin-right: 8px;
+    }
+    .box-svg-link {
+        margin-bottom: 10px;
     }
     
-    display: flex;
-    gap: 50px;
+    .contact-link:hover,
+    .contact-link:focus {
+    
+        color: var(--blue-color);
+    }
 }
 
-.auth-nav .link {
-    display: flex;
-    align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    transition: color var(--transition-duration);
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
-    text-decoration: none;
-    color: var(--secondary-color);
-    fill: currentColor;
-}
+@media screen and (min-width: 1200px) {
+    .header {
+    &__box {
+        display: flex;
+        align-items: center;
+    }
+    }
+        .current::after {
+            bottom: -4px;
+        }
 
-.auth-nav-svg {
+    .main-nav {
+        gap:50px;
+    }
+
+    .auth-nav {
+        display: flex;
+        gap: 50px;
+    }
+    .auth-nav .link {
+        padding-top: 32px;
+        padding-bottom: 32px;
+    }
+    .auth-nav-svg {
     margin-right: 10px;
-}
-
-.box-svg {
+    }
+    .box-svg {
     display: inline-block;
-}
-
-.contact-link:hover,
-.contact-link:focus {
-
-    color: var(--blue-color);
+    }
 }
