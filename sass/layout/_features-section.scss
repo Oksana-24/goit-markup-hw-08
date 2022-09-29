@@ -1,50 +1,79 @@
 .features {
-    @extend %section;
-
-    background-color: var(--white-color);
-
-    &-items {
-    width: 270px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+        &-items {
+            max-width: 480px;
+        }
+        &-title {
+            margin-bottom: 10px;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 1.42;
+            text-align: center;
+            text-transform: uppercase;
+            
+            color: var(--primary-color);
+        }
+        &-text {
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 1.71;
+            color: var(--secondary-color);
+        }
 }
-
-    &-title {
-    margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.42;
-    text-transform: uppercase;
-}
-
-    &-text {
-    color: var(--secondary-color);
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.7;
-}
-}
-
 .features-list {
-    @extend %list;
+    list-style: none;
+        &__icons {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-bottom: 30px;
+                background: #F5F4FA;
+                border-radius: 4px;
+                max-width: 480px;
+                height: 120px;
+            }
 
-    display: flex;
-    gap: 30px;
-
-    &__box {
-    display: block;
+        &__box:not(:last-child) {
+            margin-bottom: 30px;
+        }
 }
 
-    &__icons {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
-    background: #F5F4FA;
-    border-radius: 4px;
-    width: 270px;
-    height: 120px;
+
+@media screen and (min-width:768px) {
+    .features {
+        &-items {
+            max-width: 354px;
+        }
+
+        &-title {
+            text-align: left;
+        }
+    }
+
+    .features-list{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+
+        &__icons {
+            max-width: 354px;
+        }
+
+        &__box:not(:last-child) {
+            margin-bottom: 0px;
+        }
+
+    }
 }
 
-    &__svg {
-    display: flex;
+@media screen and (min-width: 1200px) {
+    .features {
+        padding-top: 94px;
+        padding-bottom: 94px;
+        &-items {
+            width: 270px;
+        }
+    
 }
 }
