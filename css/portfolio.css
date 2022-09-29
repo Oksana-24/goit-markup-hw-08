@@ -332,27 +332,56 @@ button {
   background-color: var(--background-color-header-and-footer);
 }
 
-.container__box {
-  display: flex;
-  align-items: baseline;
+@media screen and (min-width: 768px) {
+  .footer-box {
+    margin-right: 165px;
+  }
+  .container__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .container__mix {
+    display: flex;
+    align-items: baseline;
+  }
 }
-
+@media screen and (min-width: 1200px) {
+  .container__box {
+    align-items: baseline;
+    flex-direction: row;
+  }
+}
+.footer-box {
+  text-align: center;
+  margin-bottom: 60px;
+}
 .footer-box__logo {
   display: inline-block;
   margin-bottom: 20px;
   color: var(--white-color);
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
+  font-size: 24px;
+  line-height: 1.17;
   text-decoration: none;
 }
 .footer-box__accent {
   color: var(--blue-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-box {
+    text-align: start;
+    margin-bottom: 0;
+  }
+  .footer-box__logo {
+    margin-bottom: 20px;
+    font-size: 26px;
+  }
+}
 .footer-adress__item:not(:last-child) {
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 .footer-adress__href {
   transition: color var(--transition-duration);
@@ -379,9 +408,15 @@ button {
   color: var(--blue-color);
 }
 
+@media screen and (min-width: 1200px) {
+  .footer-adress__item:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
 .footer-join {
   display: block;
-  margin-left: 70px;
+  text-align: center;
+  margin-bottom: 60px;
 }
 .footer-join__title {
   margin-bottom: 20px;
@@ -394,6 +429,7 @@ button {
 .footer-join__list {
   display: flex;
   gap: 10px;
+  justify-content: center;
 }
 .footer-join__item {
   width: 44px;
@@ -414,8 +450,14 @@ button {
   background-color: var(--blue-color);
 }
 
+@media screen and (min-width: 768px) {
+  .footer-join {
+    margin-bottom: 0;
+    margin-left: 70px;
+  }
+}
 .footer-input {
-  margin-left: 93px;
+  text-align: center;
 }
 .footer-input__title {
   margin-bottom: 20px;
@@ -428,8 +470,8 @@ button {
 
 .footer-form__mail {
   padding: 15px 16px;
-  margin-right: 12px;
-  width: 358px;
+  margin-bottom: 20px;
+  width: 450px;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -468,4 +510,25 @@ button {
   top: 50%;
   right: 28px;
   transform: translateY(-50%);
+}
+
+@media screen and (min-width: 768px) {
+  .footer-form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer-input {
+    margin-left: 93px;
+    text-align: start;
+  }
+  .footer-form {
+    flex-direction: row;
+  }
+  .footer-form__mail {
+    margin-right: 12px;
+    width: 358px;
+    margin-bottom: 0;
+  }
 }/*# sourceMappingURL=portfolio.css.map */
