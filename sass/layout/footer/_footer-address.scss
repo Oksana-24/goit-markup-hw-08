@@ -5,7 +5,8 @@
 }
 
     &__item:not(:last-child) {
-    margin-bottom: 9px;
+    // margin-bottom: 9px;
+        margin-bottom: 8px;
 }
 
     &__href {
@@ -35,4 +36,12 @@
     color: var(--blue-color);
     }
 }
+}
+
+@media screen and (min-width: 1200px) {
+    .footer-adress {
+        &__item:not(:last-child) {
+                margin-bottom: 8px;
+            }
+        }
 }
