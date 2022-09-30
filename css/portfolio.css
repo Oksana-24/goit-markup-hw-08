@@ -115,20 +115,22 @@ button {
     border: none;
     background-color: transparent;
     padding: 0;
+    transition: fill var(--transition-duration);
+  }
+  .open-mobile-menu__svg:hover, .open-mobile-menu__svg:focus {
+    fill: var(--blue-color);
+  }
+  .header {
+    padding-top: 16px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #ECECEC;
+  }
+  .header__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 }
-.header {
-  padding-top: 16px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #ECECEC;
-}
-
-.header__box {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
 @media screen and (min-width: 768px) {
   .open-mobile-menu {
     display: none;
@@ -139,6 +141,10 @@ button {
   .header__nav {
     display: flex;
     align-items: center;
+    margin-right: 93px;
+  }
+  .header__box {
+    display: flex;
   }
   .main-nav {
     list-style: none;
@@ -176,14 +182,15 @@ button {
   }
   .auth-nav {
     list-style: none;
+    margin-top: 15px;
   }
   .auth-nav .link {
     display: flex;
     align-items: center;
     transition: color var(--transition-duration);
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+    font-size: 12px;
+    line-height: 1.67;
     letter-spacing: 0.02em;
     text-decoration: none;
     color: var(--secondary-color);
@@ -204,9 +211,10 @@ button {
   .header__box {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
-  .current::after {
-    bottom: -4px;
+  .header__nav {
+    margin-right: 0;
   }
   .main-nav {
     gap: 50px;
@@ -214,8 +222,11 @@ button {
   .auth-nav {
     display: flex;
     gap: 50px;
+    margin: 0;
   }
   .auth-nav .link {
+    font-size: 14px;
+    line-height: 1.14;
     padding-top: 32px;
     padding-bottom: 32px;
   }
@@ -224,6 +235,9 @@ button {
   }
   .box-svg {
     display: inline-block;
+  }
+  .box-svg-link {
+    margin-bottom: 0px;
   }
 }
 .logo {
@@ -241,6 +255,11 @@ button {
 @media screen and (min-width: 678px) {
   .logo {
     margin-right: 87px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .logo {
+    margin-right: 93px;
   }
 }
 .portfolio-button__list {
@@ -351,6 +370,9 @@ button {
     align-items: baseline;
     flex-direction: row;
   }
+  .footer-box {
+    margin-right: 0px;
+  }
 }
 .footer-box {
   text-align: center;
@@ -410,7 +432,7 @@ button {
 
 @media screen and (min-width: 1200px) {
   .footer-adress__item:not(:last-child) {
-    margin-bottom: 8px;
+    margin-bottom: 9px;
   }
 }
 .footer-join {
