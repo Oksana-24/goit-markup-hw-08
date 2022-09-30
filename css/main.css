@@ -136,6 +136,7 @@ button {
     display: none;
   }
   .header {
+    border-bottom: 1px solid #ececec;
     padding: 0;
   }
   .header__nav {
