@@ -22,7 +22,10 @@
 
     
     &__href {
-        display: block;
+        // display: block;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
         text-decoration: none;
 
         &:hover,
@@ -91,6 +94,7 @@
     border-bottom: 1px solid #EEEEEE;
     border-left: 1px solid #EEEEEE;
     border-right: 1px solid #EEEEEE;
+    flex-grow: 1;
 
     &__title {
     margin-bottom: 4px;
