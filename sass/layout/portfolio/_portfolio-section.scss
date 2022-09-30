@@ -1,5 +1,4 @@
-@media screen and (max-width:786px) {
-        .portfolio {
+.portfolio {
             padding-top: 60px;
             padding-bottom: 60px;
         }
@@ -7,7 +6,6 @@
         display: flex;
         justify-content: flex-start;
         gap: 8px;
-        // margin-bottom: 34px;
         margin-bottom: 40px;
         flex-wrap: wrap;
 }
@@ -16,16 +14,12 @@
         @extend %list;
         display: flex;
         flex-wrap: wrap;
-        // gap: 30px;
         justify-content: center;
     }
-
-    // !!!!!!!!!!!!!!!!!
     &__item {
         width: 450px;
-        margin-bottom: 30px;
     }
-    // !!!!!!!!!!!!!!!!!!!
+
     
     &__href {
         display: block;
@@ -42,22 +36,9 @@
         overflow: hidden;
     }
 }
-}
-
-
-//     .portfolio {
-//         @extend %section;
-//     }
-// }
-
 .portfolio-button {
     &__list {
     @extend %list;
-
-//     display: flex;
-//     justify-content: center;
-//     gap: 8px;
-//     margin-bottom: 34px;
 }
 
     & {
@@ -126,4 +107,39 @@
     font-size: 16px;
     line-height: 1.88;
 }                                   
+}
+@media screen and (max-width:768px) {
+    .portfolio-images__item:not(:last-child) {
+        margin-bottom: 30px;
+    }
+    
+}
+
+@media screen and (min-width:768px) {
+    .portfolio-button__list {
+        justify-content: center;
+        // margin-bottom: 0px;
+    }
+
+    .portfolio-images__item {
+        width: 354px;
+        // margin-bottom: 0;
+    }
+    .portfolio-images__list {
+        gap: 30px;
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .portfolio {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+    .portfolio-button__list {
+        margin-bottom: 48px;
+    }
+    .portfolio-images__item {
+        width: 370px;
+        // margin-bottom: 0;
+    }
 }
