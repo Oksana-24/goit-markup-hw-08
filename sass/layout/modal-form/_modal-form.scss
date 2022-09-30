@@ -82,7 +82,7 @@
     display: flex;
     align-items: center;
     margin-bottom: 30px;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.71;
     color: var(--secondary-color);
 
@@ -140,4 +140,10 @@
 
 .modal-checkbox__input:focus+.modal-checkbox__svg {
     border: 0.2px solid var(--blue-color);
+}
+
+@media screen and (min-width:1200px) {
+    .modal-checkbox {
+    font-size: 14px;
+    }
 }
