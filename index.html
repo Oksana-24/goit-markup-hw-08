@@ -65,17 +65,58 @@
         </ul>
       </div>
       <div class="mobile-menu js-menu-container">
-        <div class="container mobile-menu__container">
+        <div class="mobile-menu__container">
           <button type="button" class="mobile-menu__close js-close-menu">
             <svg class="mobile-menu__close-svg" width="40" height="40">
               <use href="./images/icons.svg#icon-close"></use>
             </svg>
           </button>
-          <ul class="list">
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
+          <div class="mobile-menu__box">
+            <ul class="mobile-menu__list">
+              <li class="mobile-menu__link">
+                <a class="mobile-menu__href current" href="./index.html"
+                  >Студія</a
+                >
+              </li>
+              <li class="mobile-menu__link">
+                <a
+                  class="mobile-menu__href"
+                  href="./portfolio.html"
+                  target="_self"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="mobile-menu__link">
+                <a class="mobile-menu__href" href="#">Контакти</a>
+              </li>
+            </ul>
+            <ul class="mobile-auth">
+              <li class="mobile-auth__item">
+                <a class="mobile-auth__href" href="tel:+380961111111">
+                  +38 096 111 11 11</a
+                >
+              </li>
+              <li class="mobile-auth__item">
+                <a class="mobile-auth__href" href="mailto:info@devstudio.com">
+                  info@devstudio.com</a
+                >
+              </li>
+            </ul>
+            <ul class="mobile-social">
+              <li class="mobile-social__item">
+                <a class="mobile-social__href" href="">Instagram</a>
+              </li>
+              <li class="mobile-social__item">
+                <a class="mobile-social__href" href="">Twitter</a>
+              </li>
+              <li class="mobile-social__item">
+                <a class="mobile-social__href" href="">Facebook</a>
+              </li>
+              <li class="mobile-social__item">
+                <a class="mobile-social__href" href="">LinkedIn</a>
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -668,7 +709,7 @@
     </footer>
 
     <!-- Модальне вікно -->
-    <!-- <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop is-hidden" data-modal>
       <div class="modal-window">
         <button type="button" class="modal-window__close" data-modal-close>
           <svg class="button-close__svg" width="18" height="18">
@@ -745,7 +786,7 @@
         </form>
       </div>
     </div>
-    <script src="./js/modal.js"></script> -->
+    <script src="./js/modal.js"></script>
     <script src="./js/menu.js"></script>
   </body>
 </html>
