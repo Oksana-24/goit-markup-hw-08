@@ -21,7 +21,7 @@
   margin: -1px;
 }
 
-.footer-join__list, .footer-adress__list, .portfolio-images__list, .portfolio-button__list {
+.footer-join__list, .footer-adress__list, .portfolio-button__list, .portfolio-images__list {
   list-style: none;
 }
 
@@ -363,19 +363,39 @@ button {
     display: none;
   }
 }
-@media screen and (max-width: 786px) {
-  .portfolio {
-    padding-top: 60px;
-    padding-bottom: 60px;
-  }
-  .portfolio-button__list {
-    display: flex;
-    justify-content: flex-start;
-    gap: 8px;
-    margin-bottom: 40px;
-    flex-wrap: wrap;
-  }
+.portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
+
+.portfolio-button__list {
+  display: flex;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.portfolio-images__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.portfolio-images__item {
+  width: 450px;
+}
+.portfolio-images__href {
+  display: block;
+  text-decoration: none;
+}
+.portfolio-images__href:hover, .portfolio-images__href:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.portfolio-images__wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
 .portfolio-button {
   padding: 6px 22px;
   font-family: inherit;
@@ -392,27 +412,6 @@ button {
   background-color: var(--blue-color);
   color: var(--white-color);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-}
-
-.portfolio-images__list {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.portfolio-images__item {
-  width: 450px;
-  margin-bottom: 30px;
-}
-.portfolio-images__href {
-  display: block;
-  text-decoration: none;
-}
-.portfolio-images__href:hover, .portfolio-images__href:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-.portfolio-images__wrapper {
-  position: relative;
-  overflow: hidden;
 }
 
 .overlay {
@@ -457,6 +456,34 @@ button {
   line-height: 1.88;
 }
 
+@media screen and (max-width: 768px) {
+  .portfolio-images__item:not(:last-child) {
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .portfolio-button__list {
+    justify-content: center;
+  }
+  .portfolio-images__item {
+    width: 354px;
+  }
+  .portfolio-images__list {
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+  .portfolio-button__list {
+    margin-bottom: 48px;
+  }
+  .portfolio-images__item {
+    width: 370px;
+  }
+}
 .footer {
   padding-top: 60px;
   padding-bottom: 60px;
