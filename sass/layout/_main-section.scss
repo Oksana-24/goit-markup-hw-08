@@ -62,7 +62,7 @@
 (min-resolution: 192dpi) and (min-width: 1200px),
 (min-resolution: 2dpdx) and (min-width: 1200px) {
     .main-section {
-        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../../images/desctop/header-desctop@2x.jpg);
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desctop/header-desctop@2x.jpg);
 
         &__title {
             width: 696px;
