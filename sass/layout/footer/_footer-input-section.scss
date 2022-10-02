@@ -64,6 +64,10 @@
     .footer-form {
         display: flex;
         flex-direction: column;
+        &__mail{
+            width: 450px;      
+        }
+
     }
     
 }

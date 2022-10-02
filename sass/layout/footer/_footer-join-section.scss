@@ -49,4 +49,12 @@
     }
     
 }
+@media screen and (min-width: 1200px) {
+    .footer-join {
+        &__title {
+                text-align: start;
+            }
+    }
+    
+}
 
