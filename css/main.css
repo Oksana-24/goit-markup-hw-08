@@ -327,7 +327,7 @@ button {
   }
   .mobile-social__href {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 13px;
     line-height: 1.22;
     letter-spacing: 0.02em;
     color: var(--blue-color);
@@ -391,6 +391,10 @@ button {
   text-transform: uppercase;
 }
 
+.main-section {
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/header-mobile@1x.jpg);
+}
+
 @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dpdx) {
   .main-section {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/mobile/header-mobile@2x.jpg);
@@ -401,6 +405,9 @@ button {
     max-width: 768px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/tablet/header-tablet@1x.jpg);
   }
+  .main-section__title {
+    width: 360px;
+  }
 }
 @media (min-device-pixel-ratio: 2) and (min-width: 768px), (min-resolution: 192dpi) and (min-width: 768px), (min-resolution: 2dpdx) and (min-width: 768px) {
   .main-section {
@@ -408,7 +415,6 @@ button {
   }
   .main-section__title {
     width: 360px;
-    font-size: 26px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -416,15 +422,17 @@ button {
     max-width: 1200px;
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desctop/header-desctop@1x.jpg);
   }
-}
-@media (min-device-pixel-ratio: 2) and (min-width: 1200px), (min-resolution: 192dpi) and (min-width: 1200px), (min-resolution: 2dpdx) and (min-width: 1200px) {
-  .main-section {
-    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desctop/header-desctop@2x.jpg);
-  }
   .main-section__title {
     width: 696px;
     font-size: 44px;
     line-height: 1.36;
+  }
+}
+@media (min-device-pixel-ratio: 2) and (min-width: 1200px), (min-resolution: 192dpi) and (min-width: 1200px), (min-resolution: 2dpdx) and (min-width: 1200px) {
+  .main-section {
+    background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/desctop/header-desctop@2x.jpg);
+    padding-top: 200px;
+    padding-bottom: 200px;
   }
 }
 .features {
@@ -625,6 +633,10 @@ button {
   .team__item {
     width: 270px;
   }
+  .team__title {
+    font-size: 36px;
+    line-height: 1.17;
+  }
 }
 .customers {
   padding-top: 60px;
@@ -633,8 +645,8 @@ button {
 .customers__title {
   margin-bottom: 30px;
   font-weight: 700;
-  font-size: 38px;
-  line-height: 1.17;
+  font-size: 28px;
+  line-height: 1.18;
   text-align: center;
 }
 .customers__list {
@@ -667,6 +679,10 @@ button {
 @media screen and (min-width: 1200px) {
   .customers__link {
     width: 170px;
+  }
+  .customers__title {
+    font-size: 38px;
+    line-height: 1.17;
   }
 }
 .footer {
@@ -802,6 +818,11 @@ button {
     margin-left: 70px;
   }
 }
+@media screen and (min-width: 1200px) {
+  .footer-join__title {
+    text-align: start;
+  }
+}
 .footer-input {
   text-align: center;
 }
@@ -862,6 +883,9 @@ button {
   .footer-form {
     display: flex;
     flex-direction: column;
+  }
+  .footer-form__mail {
+    width: 450px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -1065,5 +1089,9 @@ button {
 @media screen and (min-width: 1200px) {
   .modal-checkbox {
     font-size: 14px;
+  }
+  .modal-form-title {
+    font-size: 20px;
+    line-height: 1.15;
   }
 }/*# sourceMappingURL=main.css.map */
